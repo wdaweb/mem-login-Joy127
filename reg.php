@@ -9,6 +9,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <?php
+    if (!empty($_GET['s'])) {
+        echo "註冊成功，請輸入帳號密碼登入系統！";  
+    }
+      
+  ?>
+
 <h1>會員註冊</h1>
 <form action="reg_api.php" method="post">
 <table class="wrapper">
@@ -35,6 +43,10 @@
   <tr>
     <td>生日：</td>
     <td><input type="date" name="date" id="date"></td>
+  </tr>
+  <tr>
+    <td>電子郵件：</td>
+    <td><input type="text" name="email" id="email"></td>
   </tr>
   <tr>
     <td colspan="2" class="ct">
