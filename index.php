@@ -9,38 +9,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <?php
-    if (!empty($_GET['s'])) {
-        echo "註冊失敗，請檢查輸入資料或聯絡工程師！";  
-    }
-      
-  ?>
+    <?php
+      if (!empty($_GET['s'])) {
+          echo "註冊成功，請輸入帳密以登入";  
+      }      
+    ?>
 
+    <h1>會員登入</h1>
+    <form action="login_api.php" method="post"> 
+        <table class="wrapper">
+            <tr>
+                <td>帳號：</td>
+                <td><input type="text" name="acc" id="acc"></td>
+            </tr>
+            <tr>
+                <td>密碼：</td>
+                <td><input type="password" name="pw" id="pw"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="ct">
+                    <input type="submit" value="登入">
+                    <input type="reset" value="重置">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="ct">
+                    <a href="reg.php" class="reg">註冊會員</a> 
+                    <a href="forget.php" class="reg">忘記密碼</a>
+                </td>
+            </tr>
+        </table>
+    </form>  
 
-  <h1>會員登入</h1>
-<form action="login_api.php" method="post"> 
-<table class="wrapper">
-  <tr>
-    <td>帳號：</td>
-    <td><input type="text" name="acc" id="acc"></td>
-  </tr>
-  <tr>
-    <td>密碼：</td>
-    <td><input type="password" name="pw" id="pw"></td>
-  </tr>
-  <tr>
-    <td colspan="2" class="ct">
-        <input type="submit" value="登入">
-        <input type="reset" value="重置">
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" class="ct">
-      <a href="reg.php" class="reg">註冊會員</a> 
-      <a href="forget.php" class="reg">忘記密碼</a>
-    </td>
-  </tr>
-</table>
-</form>   
 </body>
 </html>

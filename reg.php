@@ -10,56 +10,72 @@
 </head>
 <body>
 
-  <?php
-    if (!empty($_GET['s'])) {
-        echo "註冊成功，請輸入帳號密碼登入系統！";  
-    }
-      
-  ?>
+    <center> 
+        <form action="index.php">      
+            <table border="1" >
+                <tr>
+                    <td>
+                        <?php
+                            if(!empty($_GET['s'])){
+                              echo "註冊失敗，請檢查輸入是否錯誤或聯絡客服人員！";
+                            }
+                        ?>
+                    </td>
+                </tr>           
+                <tr><td><input type="submit" value="確定"></td></tr>
+            </table>         
+        </form>
+    </center>
 
-<h1>會員註冊</h1>
-<form action="reg_api.php" method="post">
-<table class="wrapper">
-  <tr>
-    <td>帳號：</td>
-    <td><input type="text" name="acc" id="acc"></td>
-  </tr>
-  <tr>
-    <td>密碼：</td>
-    <td><input type="password" name="pw" id="pw"></td>
-  </tr>
-  <tr>
-    <td>姓名：</td>
-    <td><input type="text" name="name" id="name"></td>
-  </tr>
-  <tr>
-    <td>地址：</td>
-    <td><input type="text" name="addr" id="addr"></td>
-  </tr>
-  <tr>
-    <td>電話：</td>
-    <td><input type="text" name="tel" id="tel"></td>
-  </tr>
-  <tr>
-    <td>生日：</td>
-    <td><input type="date" name="date" id="date"></td>
-  </tr>
-  <tr>
-    <td>電子郵件：</td>
-    <td><input type="text" name="email" id="email"></td>
-  </tr>
-  <tr>
-    <td colspan="2" class="ct">
-        <input type="submit" value="註冊">
-        <input type="reset" value="重置">
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" class="ct reg">
-      <a href="index.php">回首頁</a>
-    </td>
-  </tr>
-</table>
-</form>
+    <!-- <?php
+        if(!empty($_GET['s'])){
+          echo "註冊失敗，請檢查輸入是否錯誤或聯絡客服人員！";
+        }
+    ?> -->
+
+    <h1>會員註冊</h1>
+    <form action="reg_api.php" method="post">
+        <table class="wrapper">
+            <tr>
+                <td>帳號：</td>
+                <td><input type="text" name="acc" id="acc"></td>
+            </tr>
+            <tr>
+                <td>密碼：</td>
+                <td><input type="password" name="pw" id="pw"></td>
+            </tr>
+            <tr>
+                <td>姓名：</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>地址：</td>
+                <td><input type="text" name="addr" id="addr"></td>
+            </tr>
+            <tr>
+                <td>電話：</td>
+                <td><input type="text" name="tel" id="tel"></td>
+            </tr>
+            <tr>
+                <td>生日：</td>
+                <td><input type="date" name="date" id="date"></td>
+            </tr>
+            <tr>
+                <td>電子郵件：</td>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="ct">
+                    <input type="submit" value="註冊">
+                    <input type="reset" value="重置">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="ct reg">
+                  <a href="index.php">回首頁</a>
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
